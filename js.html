@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+    <title>My XHTML Page</title>
+</head>
+<body>
+    <h1>Welcome to XHTML</h1>
+    <p>This is a basic XHTML document.</p>
+    <input type="number" name="first" id="first" step="any" placeholder="enter your number" />
+    <select id="ope">
+        <option value="+"> + </option>
+        <option value="-"> - </option>
+        <option value="*"> * </option>
+        <option value="/"> / </option>
+        <option value="%"> % </option>
+    </select>
+    <input type="number" name="second" id="second" step="any" placeholder="enter your number" />
+    <button  onclick="calc()" > Calculate</button>
+    <input type="text" name=" " id="res" readonly=" " placeholder="enter your number" />
+ </body>
+ <script type=""text\javascript"> function calc() {
+    //alert("hello")
+    var ope1 = document.getElementById('first').value;
+    var ope2 = document.getElementById('second').value;
+    var oper = document.getElementById('ope').value;
+    if (oper == '+') {
+        var res = parseInt(ope1) + parseInt(ope2);
+    }
+    if (oper == '-') {
+        var res = parseInt(ope1) - parseInt(ope2);
+    }
+    if (oper == '*') {
+        var res = parseInt(ope1) * parseInt(ope2);
+    }
+    if (oper == '/') {
+        var res = parseInt(ope1) / parseInt(ope2);
+    }
+    if (oper == '%') {
+        var res = parseInt(ope1) % parseInt(ope2);
+    }
+    document.getElementById('res').value = res;
+    
+
+    
+     }
+</script>    
+</html>
